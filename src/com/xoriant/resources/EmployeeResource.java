@@ -47,6 +47,7 @@ public class EmployeeResource {
 			@Context HttpServletRequest servletRequest) throws IOException {
 		System.out.println("Login path hitted by some body"+" "+empId+" "+password);
 		if(EmployeeDao.instance.findEmployee(empId,password)){
+			System.out.println("Employee found with");
 			servletRequest.getSession().setAttribute("empId", empId);
 			servletResponse.sendRedirect("../survey.jsp");	
 		}else{

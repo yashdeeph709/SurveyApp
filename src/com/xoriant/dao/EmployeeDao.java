@@ -9,7 +9,9 @@ public enum EmployeeDao {
 	instance;
 	
 	ArrayList<Employee> empList= new ArrayList<Employee>();
-	
+	{
+		empList.add(new Employee("e01","yashdeep","hinge"));
+	}
 	public ArrayList<Employee> getAllEmployee(){
 		return empList;
 	}
