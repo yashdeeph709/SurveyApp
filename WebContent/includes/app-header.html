@@ -1,0 +1,18 @@
+<header>
+	<div class="masthead">
+        <h3 class="title">ngSurveys</h3>
+        <div class="navbar">
+          <div class="navbar-inner">
+            <div class="container">
+              <ul class="nav">
+                <li ng-class="{active: pageClass === 'home'}"><a href="#">Home</a></li>
+                <li ng-class="{active: pageClass === 'surveys'}"><a ui-sref="surveys">Surveys</a></li>
+                <li ng-class="{active: pageClass === 'surveys'}"><a ui-sref="login">Login</a></li>
+                <li ng-class="{active: pageClass === 'surveys'}"><a ui-sref="register">Register</a></li>
+                <li ng-class="{active: pageClass === 'responses'}"><a>Responses</a></li>
+              </ul>
+            </div>
+          </div>
+        </div><!-- /.navbar -->
+      </div>
+</header>
