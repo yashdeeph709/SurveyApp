@@ -35,7 +35,7 @@ public class EmployeeResource {
 		EmployeeDao.instance.getAllEmployee().add(emp);
 		servletRequest.getSession().setAttribute("empId", empId);
 		servletRequest.getSession().setAttribute("ename", ename);
-		servletResponse.sendRedirect("../survey.jsp");
+		servletResponse.sendRedirect("../error.jsp?msg=Thank you for registering with us&link=login.html&linkname=Login Now");
 	}
 	// 10) Login Employee for the survey
 	@GET
@@ -52,7 +52,7 @@ public class EmployeeResource {
 			servletResponse.sendRedirect("../../survey.jsp");	
 		}else{
 			servletRequest.getSession().setAttribute("empId", empId);
-			servletResponse.sendRedirect("../../error.html");	
+			servletResponse.sendRedirect("../../error.jsp?msg=Your entered wrong username and password&link=register.html&linkname=RegisterNow");	
 		}
 	}
 
