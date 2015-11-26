@@ -19,7 +19,9 @@ public enum EmployeeDao {
 		Iterator<Employee> iterator=empList.iterator();
 		while(iterator.hasNext()){
 			Employee employee=iterator.next();
-			if(employee.getEmpId().equals(eid) && employee.getPassword().equals(password)){
+			Token t1=new Token(eid+":"+password);
+			Token t2=new Token(employee.getEmpId()+":"+employee.getPassword());
+			if(t1.equals(t2)){
 				return true;
 			}
 		}
