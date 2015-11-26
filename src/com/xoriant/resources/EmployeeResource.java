@@ -49,10 +49,10 @@ public class EmployeeResource {
 		if(EmployeeDao.instance.findEmployee(empId,password)){
 			System.out.println("Employee found with");
 			servletRequest.getSession().setAttribute("empId", empId);
-			servletResponse.sendRedirect("../survey.jsp");	
+			servletResponse.sendRedirect("../../survey.jsp");	
 		}else{
 			servletRequest.getSession().setAttribute("empId", empId);
-			servletResponse.sendRedirect("../error.html");	
+			servletResponse.sendRedirect("../../error.html");	
 		}
 	}
 
