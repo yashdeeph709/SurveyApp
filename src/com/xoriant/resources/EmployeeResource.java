@@ -26,9 +26,10 @@ public class EmployeeResource {
 	@Consumes(MediaType.APPLICATION_FORM_URLENCODED)
 	public void registerEmployeeForSurvey(@FormParam("empId") String empId,
 			@FormParam("ename") String ename,
+			@FormParam("password") String password,
 			@Context HttpServletResponse servletResponse,
 			@Context HttpServletRequest servletRequest) throws IOException {
-		Employee emp = new Employee(empId, ename);
+		Employee emp = new Employee(empId,ename,password);
 		EmployeeDao.instance.getAllEmployee().add(emp);
 		servletRequest.getSession().setAttribute("empId", empId);
 		servletRequest.getSession().setAttribute("ename", ename);
