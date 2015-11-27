@@ -1,0 +1,30 @@
+[
+    {
+        "choice1": "4th Floor",
+        "choice2": "2nd Floor",
+        "countChoice1": 51,
+        "countChoice2": 20,
+        "surveyId": "001"
+    },
+    {
+        "choice1": "Javascript",
+        "choice2": "Python",
+        "countChoice1": 125,
+        "countChoice2": 56,
+        "surveyId": "002"
+    },
+    {
+        "choice1": "Firefox OS",
+        "choice2": "Android",
+        "countChoice1": 40,
+        "countChoice2": 60,
+        "surveyId": "003"
+    },
+    {
+        "choice1": "Spice",
+        "choice2": "Sweet",
+        "countChoice1": 190,
+        "countChoice2": 80,
+        "surveyId": "004"
+    }
+]

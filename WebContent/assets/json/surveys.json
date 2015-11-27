@@ -1,0 +1,30 @@
+[
+    {
+        "choice1": "Spice",
+        "choice2": "Sweet",
+        "status": "Open",
+        "surveyId": "004",
+        "title": "What do you prefer while eating"
+    },
+    {
+        "choice1": "4th Floor",
+        "choice2": "2nd Floor",
+        "status": "Open",
+        "surveyId": "001",
+        "title": "Which Floor do you like"
+    },
+    {
+        "choice1": "Javascript",
+        "choice2": "Python",
+        "status": "Open",
+        "surveyId": "002",
+        "title": "Which Technology you like"
+    },
+    {
+        "choice1": "Android",
+        "choice2": "Firefox OS",
+        "status": "Close",
+        "surveyId": "003",
+        "title": "Which Phone OS you like"
+    }
+]

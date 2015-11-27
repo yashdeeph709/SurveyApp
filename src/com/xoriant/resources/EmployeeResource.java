@@ -16,6 +16,7 @@ import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 
 import com.xoriant.dao.EmployeeDao;
+import com.xoriant.dao.Token;
 import com.xoriant.model.Employee;
 
 @Path("Employees")
@@ -40,19 +41,18 @@ public class EmployeeResource {
 	// 10) Login Employee for the survey
 	@GET
 	@Path("loginuser")
-	@Produces(MediaType.TEXT_HTML)
-	public void loginEmployeeForSurvey(@QueryParam("empId") String empId,
+	@Produces(MediaType.APPLICATION_JSON)
+	public Token loginEmployeeForSurvey(@QueryParam("empId") String empId,
 			@QueryParam("password") String password,
 			@Context HttpServletResponse servletResponse,
 			@Context HttpServletRequest servletRequest) throws IOException {
 		System.out.println("Login path hitted by some body"+" "+empId+" "+password);
 		if(EmployeeDao.instance.findEmployee(empId,password)){
 			System.out.println("Employee found with");
-			servletRequest.getSession().setAttribute("empId", empId);
-			servletResponse.sendRedirect("../../survey.jsp");	
+			servletRequest.getSession().setAttribute("Token", new Token(empId+":"+password));
+			return new Token(empId+":"+password);
 		}else{
-			servletRequest.getSession().setAttribute("empId", empId);
-			servletResponse.sendRedirect("../../error.jsp?msg=Your entered wrong username and password&link=register.html&linkname=RegisterNow");	
+			return new Token("##########");
 		}
 	}
 
